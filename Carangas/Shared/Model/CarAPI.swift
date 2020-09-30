@@ -75,5 +75,34 @@ class CarAPI{
         }
         task.resume()
     }
+    
+    func deleteCar(_ car: Car, onComplete: @escaping (Result<Void, APIError>) -> Void){
+        request("DELETE", car: car, onComplete: onComplete)
+    }
+    
+    func updateCar(_ car: Car, onComplete: @escaping (Result<Void, APIError>) -> Void){
+        request("PUT", car: car, onComplete: onComplete)
+    }
+    
+    func createCar(_ car: Car, onComplete: @escaping (Result<Void, APIError>) -> Void){
+        request("POST", car: car, onComplete: onComplete)
+    }
+    
+    private func request(_ httpMethod: String, car: Car, onComplete: @escaping (Result<Void, APIError>) -> Void){
+        let urlString = basePath + "/" + (car._id ?? "")
+        let url = URL(string: urlString)!
+        
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpBody = try? JSONEncoder().encode(car)
+        urlRequest.httpMethod = httpMethod
+        
+        session.dataTask(with: urlRequest) {(data, _, _) in
+            if data == nil{
+                onComplete(.failure(.taskError))
+            } else {
+                onComplete(.success(()))
+            }
+        }.resume()
+    }
 }
 
