@@ -14,6 +14,8 @@
 		A19C4BE91F92C57D00A25342 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A19C4BE81F92C57D00A25342 /* Assets.xcassets */; };
 		A19C4BEC1F92C57D00A25342 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A19C4BEA1F92C57D00A25342 /* LaunchScreen.storyboard */; };
 		A19C4BF81F92C99600A25342 /* CarsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19C4BF71F92C99600A25342 /* CarsTableViewController.swift */; };
+		ACF0800C2523ED1000749FAA /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF0800B2523ED1000749FAA /* Car.swift */; };
+		ACF0800E2523EDFF00749FAA /* CarAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF0800D2523EDFF00749FAA /* CarAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		A19C4BEB1F92C57D00A25342 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A19C4BED1F92C57D00A25342 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A19C4BF71F92C99600A25342 /* CarsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsTableViewController.swift; sourceTree = "<group>"; };
+		ACF0800B2523ED1000749FAA /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		ACF0800D2523EDFF00749FAA /* CarAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,7 @@
 		A19C4BE01F92C57D00A25342 /* Carangas */ = {
 			isa = PBXGroup;
 			children = (
+				ACF080092523ECEF00749FAA /* Shared */,
 				2297F60C2523E53100F89427 /* Main */,
 				2297F60E2523E53B00F89427 /* Listing */,
 				2297F60A2523E4E300F89427 /* Visualization */,
@@ -140,6 +145,23 @@
 				2297F6122523E56300F89427 /* Supporting Files */,
 			);
 			path = Carangas;
+			sourceTree = "<group>";
+		};
+		ACF080092523ECEF00749FAA /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				ACF0800A2523ECFB00749FAA /* Model */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		ACF0800A2523ECFB00749FAA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ACF0800B2523ED1000749FAA /* Car.swift */,
+				ACF0800D2523EDFF00749FAA /* CarAPI.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,7 +238,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A19C4BF81F92C99600A25342 /* CarsTableViewController.swift in Sources */,
+				ACF0800E2523EDFF00749FAA /* CarAPI.swift in Sources */,
 				A19C4BE41F92C57D00A25342 /* CarViewController.swift in Sources */,
+				ACF0800C2523ED1000749FAA /* Car.swift in Sources */,
 				A16BA8671F953B940045AD32 /* AddEditViewController.swift in Sources */,
 				A19C4BE21F92C57D00A25342 /* AppDelegate.swift in Sources */,
 			);
